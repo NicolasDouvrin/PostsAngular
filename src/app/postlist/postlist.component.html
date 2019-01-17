@@ -1,0 +1,14 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLove > 0 ,
+                'list-group-item-danger': postLove < 0 }">
+  <div style="margin-bottom: 10px">
+    <h2 style="display:inline">{{ postName }} </h2>
+    <h4 style="float: right;color: gray;display: inline"> {{ lastUpdate | date: 'short' }}</h4>
+  </div>
+  <p> {{ postContent }}</p>
+  <button class="btn btn-success"
+          style="margin-right: 10px"
+          (click)="onLike()"> Like </button>
+  <button class="btn btn-danger"
+          (click)="onDislike()"> Dislike </button>
+</li>

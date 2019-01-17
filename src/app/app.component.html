@@ -1,0 +1,18 @@
+<div class="container" style="font-weight: bold;">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h2 style="font-weight: bold;">Posts</h2>
+
+      <ul class="list-group">
+        <app-postlist *ngFor="let posts of posts"
+                      [postName]="posts.name"
+                      [postContent]="posts.content"
+                      [postLove]="posts.love">
+        </app-postlist>
+      </ul>
+
+    </div>
+
+  </div>
+</div>
